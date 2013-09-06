@@ -1,0 +1,2 @@
+[1076:0906/081437:ERROR:gpu_info_collector_win.cc(102)] Can't retrieve a valid WinSAT assessment.
+[1076:0906/081438:INFO:CONSOLE(52)] "Uncaught ReferenceError: Tray is not defined", source: file:///H:/Java/Workspaces/IQQ_V3/WebContent/js/iqq.js (52)

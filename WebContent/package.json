@@ -1,0 +1,14 @@
+{
+  "main": "login.html",
+  "name": "IQQ",
+  "description": "IQQ",
+  "version": "3.0",
+  "window": {
+  	"toolbar": false,
+	"icon": "icon.png",
+	"title": "IQQ",
+	"width": 240,
+	"height": 550,
+	"single-instance": false
+  }
+}
