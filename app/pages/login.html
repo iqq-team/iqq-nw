@@ -3,110 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <title>IQQ</title>
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/iqq.css" rel="stylesheet">
-<script type="text/javascript" src="js/iqq.js"></script>
-<script type="text/javascript" src="js/jquery-2.0.3.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript">	
-	$(function() {
-		// 选择账号
-		$("#select-account li a").click(function() {
-			$("#account").val(this.text);
-			$("#account").tooltip('hide');
-		});
-		// 账号为空时提示
-		$("#account").bind('input',function(){
-			if($(this).val() === "") {
-				$(this).tooltip('show');
-			} else {
-				$(this).tooltip('hide');
-			}
-		}).bind('mouseleave', function() {
-			$(this).tooltip('hide');
-		});
-		// 密码为空时提示
-		$("#password").bind('input',function() {
-			if($(this).val() === "") {
-				$(this).tooltip('show');
-			} else {
-				$(this).tooltip('hide');
-			}
-		}).bind('mouseleave', function() {
-			$(this).tooltip('hide');
-		});
-		
-		// to login
-		$(".btn-login").click(function() {
-			var account = $("#account").val();
-			var password = $("#password").val();
-			if(account===""){
-				$("#account").focus().tooltip('show');
-				return;
-			}
-			if(password===""){
-				$("#password").focus().tooltip('show');
-				return;
-			}
-			
-			$(".login-form").hide();
-			$(".login-progress").show();
-			
-			setTimeout(function() {
-				window.location = "main.html";
-			}, 1000);
-		});
-		// login cancel
-		$(".btn-cancel").click(function() {
-			$(".login-form").show();
-			$(".login-progress").hide();
-		});
-	});
-</script>
+<link href="../themes/default/css/bootstrap.css" rel="stylesheet">
+<link href="../themes/default/css/iqq.css" rel="stylesheet">
+<script type="text/javascript" src="../utils/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="../utils/iqq.js"></script>
+
 </head>
-<body id="login">
-	<div class="login-form">
-		<ul class="login-ul">
-			<li>
-				<div class="login-logo"><img src="images/logo128X128.png" width="100px" height="100px"/></div>
-			</li>
-			<li>
-				<div class="input-group input-group-sm">
-					<input type="text" id="account" class="form-control input-sm" placeholder="帐号/邮箱" data-toggle="tooltip" data-placement="top" data-trigger="manual" title="请输入您的帐号/邮箱" />
-					<div class="input-group-btn btn-group">
-						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-			                <span class="caret"></span>
-			            </button>
-			            <ul id="select-account" class="dropdown-menu pull-right">
-				        	<li><a href="#">6208317</a></li>
-				        	<li><a href="#">917362009</a></li>
-				        </ul>
-					</div>
-				</div>
-			</li>
-			<li>
-				<input type="password" id="password" class="form-control input-sm" placeholder="密码" data-toggle="tooltip" data-placement="top" data-trigger="manual" title="请输入您的密码" />
-			</li>
-			<li>
-				<label class="l-checkbox"> 
-				<input type="checkbox" id="remember-pwd" /> 记住密码 </label> 
-				<label class="l-checkbox"> 
-				<input type="checkbox" id="auto-login" /> 自动登陆 </label>
-			</li>
-			<li>
-				<button class="btn btn-primary btn-login">登&nbsp;&nbsp;&nbsp;录</button>
-			</li>
-		</ul>
-	</div>
-	<div class="login-progress" style="display: none;">
-		<img src="images/logo128X128.png" width="100px" height="100px" class="clearfix:after" style="margin-bottom: 20px"/>
-		<div class="progress progress-striped active">
-			<div class="progress-bar"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-		    	<span class="sr-only">Login...</span>
+<body>
+<div id="wrapper">
+		<div id="title-bar" command="window-caption">
+			<div id="title-drag">
+				<div id="doubanLogo">&nbsp;</div>
 			</div>
+			<div class="ctrl-bar">
+				<a command='window-cfg'>&nbsp;</a>
+				<a command="window-min">&nbsp;</a>
+				<a command="window-close">&nbsp;</a>
+			</div>
+			<div class="clear"></div>
 		</div>
-		<span class="clearfix:after">Logining...</span><br>
-		<button class="btn btn-primary btn-cancel">取&nbsp;&nbsp;&nbsp;消</button>
+		<div id="main-box">
+			
+		</div>
 	</div>
 </body>
 </html>

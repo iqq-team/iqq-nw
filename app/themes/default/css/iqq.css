@@ -1,0 +1,49 @@
+html { margin: 0; padding: 0; background: none; }
+body {
+	margin: 0; padding: 0;
+	border:none;
+	overflow: hidden;
+}
+* {font-family: "Arial","微软雅黑"; }
+.clear {clear:both;}
+
+#wrapper { margin: 0px; padding:0; overflow: hidden; border:none; }
+/* 被侧滑的主面板 */
+#slider {margin:0; padding:0; width:300px; height:445px; overflow:hidden; border:none; position: relative; background: url(../images/slider.png); outline:5px glow #666 0px;}
+
+
+/* 标题栏 */
+#title-drag { -webkit-user-select: none;-webkit-app-region: drag; width:350px;height: 35px;float:left;}
+#title-bar {height:35px; margin:0; padding:0; border:none;overflow:hidden; background: #fff; z-index: 9;box-shadow: 1px 3px 4px #888888;} 
+#title-bar span.title { font: system; margin:0; color: #fff; } 
+#title-bar #doubanLogo{width:70px; height: 18px; overflow: hidden; position: absolute; top:8px; left: 5px; background: url(../images/logo.png); }
+
+#title-bar .ctrl-bar { position: absolute; top: 0; right: 0; width: 66px; height:35px; flow: horizontal; cursor: default;}
+#title-bar .ctrl-bar a , #title-bar .ctrl-bar div { display: block; height: 35px; padding:0; margin: 0; overflow:hidden; float:left;}
+.ctrl-bar{margin: 0px 6px;float:right;}
+
+
+/* 关闭按钮 */
+#title-bar a[command=window-close] { width: 22px; background: url(../images/close_a.png) no-repeat; }
+#title-bar a[command=window-close]:hover { background: url(../images/close_b.png) no-repeat; transition: blend;}
+#title-bar a[command=window-close]:active { background: url(../images/close_c.png) no-repeat; }
+
+/* 最小化按钮 */
+#title-bar a[command=window-min] { width: 22px; background: url(../images/min_a.png) no-repeat; }
+#title-bar a[command=window-min]:hover { background: url(../images/min_b.png) no-repeat; transition: blend;}
+#title-bar a[command=window-min]:active { background: url(../images/min_c.png) no-repeat; }
+
+/* 配置菜单 */
+#title-bar a[command=window-cfg] { behavior: popup-menu; width: 22px; background: url(../images/menu_a.png) no-repeat; }
+#title-bar a[command=window-cfg]:hover { background: url(../images/menu_b.png) no-repeat; transition: blend;}
+#title-bar a[command=window-cfg]:active{ background: url(../images/menu_c.png) no-repeat; }
+
+#main-box{height:300px; width:100%;}
+
+#box-test
+{
+width:50px;
+height:30px;
+background-color:#ff9900;
+box-shadow: 2px 2px 2px #888888;
+}

@@ -5,10 +5,11 @@
   "version": "3.0",
   "window": {
   	"toolbar": false,
-	"icon": "icon.png",
-	"title": "IQQ",
-	"width": 240,
-	"height": 550,
-	"single-instance": false
+  	"icon": "icon.png",
+  	"title": "IQQ",
+  	"width": 450,
+  	"height": 350,
+  	"single-instance": false,
+    "frame": false
   }
 }
