@@ -7,8 +7,8 @@
   	"toolbar": false,
   	"icon": "icon.png",
   	"title": "IQQ",
-  	"width": 450,
-  	"height": 350,
+  	"width": 380,
+  	"height": 260,
   	"single-instance": false,
     "frame": false
   }

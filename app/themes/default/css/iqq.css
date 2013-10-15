@@ -13,7 +13,7 @@ body {
 
 
 /* 标题栏 */
-#title-drag { -webkit-user-select: none;-webkit-app-region: drag; width:350px;height: 35px;float:left;}
+#title-drag { -webkit-user-select: none;-webkit-app-region: drag; width:250px;height: 35px;float:left;}
 #title-bar {height:35px; margin:0; padding:0; border:none;overflow:hidden; background: #fff; z-index: 9;box-shadow: 1px 3px 4px #888888;} 
 #title-bar span.title { font: system; margin:0; color: #fff; } 
 #title-bar #doubanLogo{width:70px; height: 18px; overflow: hidden; position: absolute; top:8px; left: 5px; background: url(../images/logo.png); }
@@ -38,12 +38,16 @@ body {
 #title-bar a[command=window-cfg]:hover { background: url(../images/menu_b.png) no-repeat; transition: blend;}
 #title-bar a[command=window-cfg]:active{ background: url(../images/menu_c.png) no-repeat; }
 
-#main-box{height:300px; width:100%;}
 
-#box-test
-{
-width:50px;
-height:30px;
-background-color:#ff9900;
-box-shadow: 2px 2px 2px #888888;
-}
+
+/*********************************************************************/
+.login-box{height:300px;margin:20px 2px 2px 2px;}
+.login-left{float:left; margin:20px 0px 0 20px;}
+.login-avatar{box-shadow: 0px 0px 10px 3px #ccc; width:100px; height: 100px;}
+.login-avatar img {padding: 1px; width:100px; height: 100px;}
+.login-right{float:left; margin:20px 0px 0 20px;}
+.login-bottom{margin:0px 0px 0 10px; text-align:center}
+.login-link{float:left; width: 130px;}
+.login-link a {font-size:12px;}
+.login-button {float:left; width:220px;}
+.login-button button{width:100%;}
