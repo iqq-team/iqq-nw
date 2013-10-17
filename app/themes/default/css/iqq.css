@@ -4,7 +4,7 @@ body {
 	border:none;
 	overflow: hidden;
 }
-* {font-family: "Arial","微软雅黑"; }
+/* * {font-family: "Arial","微软雅黑"; }*/
 .clear {clear:both;}
 
 #wrapper { margin: 0px; padding:0; overflow: hidden; border:none; }
@@ -14,7 +14,7 @@ body {
 
 /* 标题栏 */
 #title-drag { -webkit-user-select: none;-webkit-app-region: drag; width:250px;height: 35px;float:left;}
-#title-bar {height:35px; margin:0; padding:0; border:none;overflow:hidden; background: #fff; z-index: 9;box-shadow: 1px 3px 4px #888888;} 
+#title-bar {height:35px; margin:0; padding:0; border:none;overflow:hidden; background: #fff; z-index: 9;box-shadow: 1px 2px 2px #ccc;} 
 #title-bar span.title { font: system; margin:0; color: #fff; } 
 #title-bar #doubanLogo{width:70px; height: 18px; overflow: hidden; position: absolute; top:8px; left: 5px; background: url(../images/logo.png); }
 
