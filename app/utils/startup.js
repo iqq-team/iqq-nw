@@ -1,57 +1,50 @@
+// Load native UI library
+var gui = require('nw.gui');
+var win = gui.Window.get();
 $(document).ready(function() {
 
+	initWin();
+	initTray();
+
+});
+
+function initWin() {
 	$("#title-bar a[command=window-close]").click(function(){
-		var win = gui.Window.get();
 		gui.App.quit();
 	});
 
 	$("#title-bar a[command=window-min]").click(function(){
-		var win = gui.Window.get();
-		win.minimize();
+		win.hide();
 	});
 
 	$("#title-bar a[command=window-cfg]").click(function(){
-		gui.Window.get().showDevTools();
+		win.showDevTools();
 	});
+}
 
-	// 加载本地UI库
-	// Load native UI library
-	var gui = require('nw.gui');
-
-	// 系统托盘实现
+var tray;
+function initTray() {
+	
 	// Create a tray icon
-	var tray = new gui.Tray({
+	tray = new gui.Tray({
 		title : 'IQQ',
 		tooltip : 'IQQ V3',
 		icon : 'resources/icon.png'
 	});
-
-	// Get the current window
-	var win = gui.Window.get();
-
-	// Listen to the minimize event
-	win.on('minimize', function() {
-		// Minimize the window
-		this.hide();
-		// Show window and remove tray when clicked
-		tray.on('click', function() {
-			win.restore();
-			win.show();
-		});
-	});
-
 	// Give it a menu
 	var menu = new gui.Menu();
 	menu.append(new gui.MenuItem({
 		label : '打开主面板',
 		click : function() {
-			win.show();
+			win.restore();
+			console.log("win show...");
 		}
 	}));
 	menu.append(new gui.MenuItem({
 		label : '设置',
 		click : function() {
 			alert("no implements!");
+			tray.icon = "default-avatar.jpg";
 		}
 	}));
 	menu.append(new gui.MenuItem({
@@ -64,5 +57,11 @@ $(document).ready(function() {
 		}
 	}));
 	tray.menu = menu;
+	
+	tray.on('click', function() {
+		win.restore();
+		win.show();
+		console.log("win show...");
+	});
+
 }
-);

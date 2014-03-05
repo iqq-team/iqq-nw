@@ -10,6 +10,7 @@
   	"width": 380,
   	"height": 260,
   	"single-instance": false,
-    "frame": false
+    "frame": false,
+    "position": "center"
   }
 }
